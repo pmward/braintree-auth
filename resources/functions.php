@@ -51,7 +51,7 @@ function createTrialAccount($partnerClientId, $partnerClientSecret) {
     'paymentMethods' => array(
         'credit_card', 'paypal'
     ));*/
-    
+
     //UK onboarding
     $onboardingParams = array(
     //'merchantId' => 'c62xmytns4rhrsgb',
@@ -114,7 +114,16 @@ function createSignUp($partnerClientId, $partnerClientSecret, $onboardingParams)
     return $url;
 }
 
+function createClientToken($accessToken) {
+    $gateway = new Braintree_Gateway(array(
+         'accessToken' => $accessToken));
+
+    $clientToken = $gateway->clientToken()->generate();
+    //array(
+      //"customerId" => '',
+      //'merchantAccountId' => 'USD'));
+    return $clientToken;
+}
 
 //$url = createSignUp($partnerClientId, $partnerClientSecret, $onboardingParams);
-
 ?>

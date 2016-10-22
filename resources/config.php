@@ -22,6 +22,17 @@ require_once("functions.php");
 //my BT sandbox test app - trial accounts dont seem to work on my account, maybe another setting is required in BT?
  $partnerClientId = 'client_id$sandbox$59fh2sd5sknfbchh';
  $partnerClientSecret = 'client_secret$sandbox$586a96992bcbb4b93996aafde7bc572d';
+ $accessToken = 'access_token$sandbox$2bdsdksbkdvzcnxs$2afc80e9948cd0227806da136cf75849';
+ //'accessToken' => 'access_token$sandbox$2bdsdksbkdvzcnxs$cd3d96b6a4ccf7bab234262c1024d099'
+ //'accessToken' => 'access_token$sandbox$2bdsdksbkdvzcnxs$2afc80e9948cd0227806da136cf75849'
+ //access token with paypal and cards:
+ //'accessToken' => 'access_token$sandbox$2bdsdksbkdvzcnxs$597c8a02230dca13677dc78c52fb8e44',
+ //'merchantAccountId' => 'USD'
+ //'refreshToken' => string 'refresh_token$sandbox$2bdsdksbkdvzcnxs$9596b533e8b464d163de0d840710c5d9' (length=71)
+ //'accessToken' => 'access_token$sandbox$2bdsdksbkdvzcnxs$f0311a0859ef88dc813df434aecbef3a'
+ //'accessToken' => 'access_token$sandbox$w2d7snyv86b6m993$c48ed26d18a0e2f5a2b91410119c2cbe'
+//'accessToken' => 'access_token$sandbox$w2d7snyv86b6m993$3a165d034ed45434c9c2812ae796205f'
+
 
 //DEFINE PROJECT PATH CONSTANTS
 defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
