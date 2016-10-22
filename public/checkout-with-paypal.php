@@ -34,42 +34,69 @@ include(TEMPLATE_FRONT . DS . "left-sidebar.php");
 var client_token = "<?php echo $clientToken; ?>";
 
 // Fetch the button you are using to initiate the PayPal flow
-var paypalButton = document.getElementById('paypal-button');
+var paypalButton = document.querySelector('.paypal-button');
 
-// Create a Client component
+// Create a client.
 braintree.client.create({
   authorization: client_token
 }, function (clientErr, clientInstance) {
-  // Create PayPal component
+
+  // Stop if there was a problem creating the client.
+  // This could happen if there is a network error or if the authorization
+  // is invalid.
+  if (clientErr) {
+    console.error('Error creating client:', clientErr);
+    return;
+  }
+
+  // Create a PayPal component.
   braintree.paypal.create({
     client: clientInstance
-  }, function (err, paypalInstance) {
-    paypalButton.addEventListener('click', function () {
-      // Tokenize here!
-      paypalInstance.tokenize({
-        flow: 'checkout', // Required
-        amount: 10.00, // Required
-        currency: 'USD', // Required
-        locale: 'en_US',
-        enableShippingAddress: true,
-        shippingAddressEditable: false,
-        shippingAddressOverride: {
-          recipientName: 'Scruff McGruff',
-          line1: '1234 Main St.',
-          line2: 'Unit 1',
-          city: 'Chicago',
-          countryCode: 'US',
-          postalCode: '60652',
-          state: 'IL',
-          phone: '123.456.7890'
+  }, function (paypalErr, paypalInstance) {
+
+    // Stop if there was a problem creating PayPal.
+    // This could happen if there was a network error or if it's incorrectly
+    // configured.
+    if (paypalErr) {
+      console.error('Error creating PayPal:', paypalErr);
+      return;
+    }
+
+    // Enable the button.
+    paypalButton.removeAttribute('disabled');
+
+    // When the button is clicked, attempt to tokenize.
+    paypalButton.addEventListener('click', function (event) {
+
+      // Because tokenization opens a popup, this has to be called as a result of
+      // customer action, like clicking a button—you cannot call this at any time.
+        paypalInstance.tokenize({
+      flow: 'checkout', // Required
+      amount: 10.00, // Required
+      currency: 'USD', // Required
+      locale: 'en_US',
+      enableShippingAddress: true,
+      }, function (tokenizeErr, payload) {
+
+        // Stop if there was an error.
+        if (tokenizeErr) {
+          if (tokenizeErr.type !== 'CUSTOMER') {
+            console.error('Error tokenizing:', tokenizeErr);
+          }
+          return;
         }
-      }, function (err, tokenizationPayload) {
-        // Tokenization complete
-        // Send tokenizationPayload.nonce to server
-        console.log('something worked...')
+
+        // Tokenization succeeded!
+        paypalButton.setAttribute('disabled', true);
+        console.log('Got a nonce! You should submit this to your server.');
+        console.log(payload.nonce);
+
       });
-    });
+
+    }, false);
+
   });
+
 });
 
 </script>
