@@ -1,0 +1,472 @@
+[17-Jul-2016 18:34:18 UTC] PHP Notice:  Undefined property on Braintree_Result_Error: credentials in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php on line 42
+[17-Jul-2016 18:34:18 UTC] PHP Stack trace:
+[17-Jul-2016 18:34:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/codeForAccessToken.php:0
+[17-Jul-2016 18:34:18 UTC] PHP   2. Braintree_Base->__get() /home/ubuntu/workspace/public/codeForAccessToken.php:26
+[17-Jul-2016 18:34:18 UTC] PHP   3. trigger_error() /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php:42
+[17-Jul-2016 18:34:18 UTC] PHP Notice:  Undefined property on Braintree_Result_Error: credentials in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php on line 42
+[17-Jul-2016 18:34:18 UTC] PHP Stack trace:
+[17-Jul-2016 18:34:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/codeForAccessToken.php:0
+[17-Jul-2016 18:34:18 UTC] PHP   2. Braintree_Base->__get() /home/ubuntu/workspace/public/codeForAccessToken.php:27
+[17-Jul-2016 18:34:18 UTC] PHP   3. trigger_error() /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php:42
+[17-Jul-2016 18:34:18 UTC] PHP Notice:  Undefined property on Braintree_Result_Error: credentials in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php on line 42
+[17-Jul-2016 18:34:18 UTC] PHP Stack trace:
+[17-Jul-2016 18:34:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/codeForAccessToken.php:0
+[17-Jul-2016 18:34:18 UTC] PHP   2. Braintree_Base->__get() /home/ubuntu/workspace/public/codeForAccessToken.php:28
+[17-Jul-2016 18:34:18 UTC] PHP   3. trigger_error() /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php:42
+[17-Jul-2016 18:39:32 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(15): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 18:40:31 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(15): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 18:41:14 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(15): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 21:40:32 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(15): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 21:42:32 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(15): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 21:42:43 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(15): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 21:59:06 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(22): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 22:02:26 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(22): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 22:04:38 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(24): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 22:09:38 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(24): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 22:09:43 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(24): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 22:26:45 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(24): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 22:37:21 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(16): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 22:55:19 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(20): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[17-Jul-2016 23:01:48 UTC] PHP Parse error:  syntax error, unexpected 'the' (T_STRING) in /home/ubuntu/workspace/public/codeForAccessToken.php on line 13
+[17-Jul-2016 23:03:08 UTC] PHP Notice:  Undefined property on Braintree_Result_Error: credentials in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php on line 42
+[17-Jul-2016 23:03:08 UTC] PHP Stack trace:
+[17-Jul-2016 23:03:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/codeForAccessToken.php:0
+[17-Jul-2016 23:03:08 UTC] PHP   2. Braintree_Base->__get() /home/ubuntu/workspace/public/codeForAccessToken.php:26
+[17-Jul-2016 23:03:08 UTC] PHP   3. trigger_error() /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php:42
+[17-Jul-2016 23:03:08 UTC] PHP Notice:  Undefined property on Braintree_Result_Error: credentials in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php on line 42
+[17-Jul-2016 23:03:08 UTC] PHP Stack trace:
+[17-Jul-2016 23:03:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/codeForAccessToken.php:0
+[17-Jul-2016 23:03:08 UTC] PHP   2. Braintree_Base->__get() /home/ubuntu/workspace/public/codeForAccessToken.php:27
+[17-Jul-2016 23:03:08 UTC] PHP   3. trigger_error() /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php:42
+[17-Jul-2016 23:03:08 UTC] PHP Notice:  Undefined property on Braintree_Result_Error: credentials in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php on line 42
+[17-Jul-2016 23:03:08 UTC] PHP Stack trace:
+[17-Jul-2016 23:03:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/codeForAccessToken.php:0
+[17-Jul-2016 23:03:08 UTC] PHP   2. Braintree_Base->__get() /home/ubuntu/workspace/public/codeForAccessToken.php:28
+[17-Jul-2016 23:03:08 UTC] PHP   3. trigger_error() /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Base.php:42
+[17-Jul-2016 23:07:19 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(24): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[18-Jul-2016 09:45:28 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(25): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[18-Jul-2016 09:45:28 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(25): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[18-Jul-2016 09:53:07 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/sale.php(25): Braintree_ClientTokenGateway->generate()
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[22-Jul-2016 11:24:12 UTC] PHP Parse error:  syntax error, unexpected ''access_token$sandbox$2bdsdksb' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/ubuntu/workspace/public/sale.php on line 13
+[03-Sep-2016 15:05:07 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/MerchantGateway.php(20): Braintree_Http->post('/merchants/crea...', Array)
+#2 /home/ubuntu/workspace/resources/functions.php(13): Braintree_MerchantGateway->create(Array)
+#3 /home/ubuntu/workspace/public/trial-account.php(13): createTrialAccount('client_id$sandb...', 'client_secret$s...')
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[03-Sep-2016 15:08:27 UTC] PHP Fatal error:  Call to undefined function createMerchant() in /home/ubuntu/workspace/resources/functions.php on line 17
+[03-Sep-2016 15:08:27 UTC] PHP Stack trace:
+[03-Sep-2016 15:08:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/resources/functions.php:0
+[03-Sep-2016 15:08:55 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/MerchantGateway.php(20): Braintree_Http->post('/merchants/crea...', Array)
+#2 /home/ubuntu/workspace/resources/functions.php(13): Braintree_MerchantGateway->create(Array)
+#3 /home/ubuntu/workspace/resources/functions.php(17): createTrialAccount('client_id$sandb...', 'client_secret$s...')
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[03-Sep-2016 15:11:41 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/MerchantGateway.php(20): Braintree_Http->post('/merchants/crea...', Array)
+#2 /home/ubuntu/workspace/resources/functions.php(13): Braintree_MerchantGateway->create(Array)
+#3 /home/ubuntu/workspace/public/trial-account.php(13): createTrialAccount('client_id$sandb...', 'client_secret$s...')
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[03-Sep-2016 15:14:59 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/MerchantGateway.php(20): Braintree_Http->post('/merchants/crea...', Array)
+#2 /home/ubuntu/workspace/resources/functions.php(13): Braintree_MerchantGateway->create(Array)
+#3 /home/ubuntu/workspace/public/trial-account.php(13): createTrialAccount('client_id$sandb...', 'client_secret$s...')
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[03-Sep-2016 15:57:35 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/MerchantGateway.php(20): Braintree_Http->post('/merchants/crea...', Array)
+#2 /home/ubuntu/workspace/resources/functions.php(13): Braintree_MerchantGateway->create(Array)
+#3 /home/ubuntu/workspace/public/trial-account.php(13): createTrialAccount('client_id$sandb...', 'client_secret$s...')
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[03-Sep-2016 16:28:36 UTC] PHP Warning:  include(/home/ubuntu/workspace/resources/templates/front/sidebar.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/public/ecs.php on line 6
+[03-Sep-2016 16:28:36 UTC] PHP Stack trace:
+[03-Sep-2016 16:28:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/ecs.php:0
+[03-Sep-2016 16:28:36 UTC] PHP Warning:  include(): Failed opening '/home/ubuntu/workspace/resources/templates/front/sidebar.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/public/ecs.php on line 6
+[03-Sep-2016 16:28:36 UTC] PHP Stack trace:
+[03-Sep-2016 16:28:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/ecs.php:0
+[03-Sep-2016 16:56:39 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/MerchantGateway.php(20): Braintree_Http->post('/merchants/crea...', Array)
+#2 /home/ubuntu/workspace/resources/functions.php(13): Braintree_MerchantGateway->create(Array)
+#3 /home/ubuntu/workspace/public/trial-account.php(13): createTrialAccount('client_id$sandb...', 'client_secret$s...')
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[03-Sep-2016 17:01:25 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/MerchantGateway.php(20): Braintree_Http->post('/merchants/crea...', Array)
+#2 /home/ubuntu/workspace/resources/functions.php(13): Braintree_MerchantGateway->create(Array)
+#3 /home/ubuntu/workspace/public/trial-account.php(13): createTrialAccount('client_id$sandb...', 'client_secret$s...')
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[03-Sep-2016 19:48:41 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/MerchantGateway.php(20): Braintree_Http->post('/merchants/crea...', Array)
+#2 /home/ubuntu/workspace/resources/functions.php(13): Braintree_MerchantGateway->create(Array)
+#3 /home/ubuntu/workspace/public/trial-account.php(13): createTrialAccount('client_id$sandb...', 'client_secret$s...')
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[04-Sep-2016 14:06:10 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Configuration' with message 'Braintree_Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree_Gateway).' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(31): Braintree_Configuration->assertHasAccessTokenOrKeys()
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Gateway.php(49): Braintree_ClientTokenGateway->__construct(Object(Braintree_Gateway))
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientToken.php(17): Braintree_Gateway->clientToken()
+#3 /home/ubuntu/workspace/resources/functions.php(4): Braintree_ClientToken::generate()
+#4 /home/ubuntu/workspace/resources/config.php(6): require_once('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/public/index.php(5): require_once('/home/ubuntu/wo...')
+#6 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php on line 117
+[04-Sep-2016 14:07:05 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Configuration' with message 'Braintree_Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree_Gateway).' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(31): Braintree_Configuration->assertHasAccessTokenOrKeys()
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Gateway.php(49): Braintree_ClientTokenGateway->__construct(Object(Braintree_Gateway))
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientToken.php(17): Braintree_Gateway->clientToken()
+#3 /home/ubuntu/workspace/resources/functions.php(4): Braintree_ClientToken::generate()
+#4 /home/ubuntu/workspace/resources/config.php(6): require_once('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/public/index.php(5): require_once('/home/ubuntu/wo...')
+#6 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php on line 117
+[04-Sep-2016 14:07:22 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Configuration' with message 'Braintree_Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree_Gateway).' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(31): Braintree_Configuration->assertHasAccessTokenOrKeys()
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Gateway.php(49): Braintree_ClientTokenGateway->__construct(Object(Braintree_Gateway))
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientToken.php(17): Braintree_Gateway->clientToken()
+#3 /home/ubuntu/workspace/resources/functions.php(4): Braintree_ClientToken::generate()
+#4 /home/ubuntu/workspace/resources/config.php(6): require_once('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/public/clientToken.php(3): require_once('/home/ubuntu/wo...')
+#6 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php on line 117
+[04-Sep-2016 14:07:31 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Configuration' with message 'Braintree_Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree_Gateway).' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(31): Braintree_Configuration->assertHasAccessTokenOrKeys()
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Gateway.php(49): Braintree_ClientTokenGateway->__construct(Object(Braintree_Gateway))
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientToken.php(17): Braintree_Gateway->clientToken()
+#3 /home/ubuntu/workspace/resources/functions.php(4): Braintree_ClientToken::generate()
+#4 /home/ubuntu/workspace/resources/config.php(6): require_once('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/public/clientToken.php(3): require_once('/home/ubuntu/wo...')
+#6 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php on line 117
+[04-Sep-2016 14:47:16 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Configuration' with message 'Braintree_Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree_Gateway).' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(31): Braintree_Configuration->assertHasAccessTokenOrKeys()
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Gateway.php(49): Braintree_ClientTokenGateway->__construct(Object(Braintree_Gateway))
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientToken.php(17): Braintree_Gateway->clientToken()
+#3 /home/ubuntu/workspace/resources/functions.php(4): Braintree_ClientToken::generate()
+#4 /home/ubuntu/workspace/resources/config.php(6): require_once('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/public/clientToken.php(3): require_once('/home/ubuntu/wo...')
+#6 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php on line 117
+[04-Sep-2016 14:48:00 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Configuration' with message 'Braintree_Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree_Gateway).' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(31): Braintree_Configuration->assertHasAccessTokenOrKeys()
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Gateway.php(49): Braintree_ClientTokenGateway->__construct(Object(Braintree_Gateway))
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientToken.php(17): Braintree_Gateway->clientToken()
+#3 /home/ubuntu/workspace/resources/functions.php(4): Braintree_ClientToken::generate()
+#4 /home/ubuntu/workspace/resources/config.php(6): require_once('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/public/clientToken.php(3): require_once('/home/ubuntu/wo...')
+#6 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php on line 117
+[04-Sep-2016 14:48:29 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Configuration' with message 'Braintree_Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree_Gateway).' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(31): Braintree_Configuration->assertHasAccessTokenOrKeys()
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Gateway.php(49): Braintree_ClientTokenGateway->__construct(Object(Braintree_Gateway))
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientToken.php(17): Braintree_Gateway->clientToken()
+#3 /home/ubuntu/workspace/resources/functions.php(4): Braintree_ClientToken::generate()
+#4 /home/ubuntu/workspace/resources/config.php(6): require_once('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/public/sale.php(3): require_once('/home/ubuntu/wo...')
+#6 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php on line 117
+[04-Sep-2016 14:49:10 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Configuration' with message 'Braintree_Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree_Gateway).' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php:117
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(31): Braintree_Configuration->assertHasAccessTokenOrKeys()
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Gateway.php(49): Braintree_ClientTokenGateway->__construct(Object(Braintree_Gateway))
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientToken.php(17): Braintree_Gateway->clientToken()
+#3 /home/ubuntu/workspace/resources/functions.php(4): Braintree_ClientToken::generate()
+#4 /home/ubuntu/workspace/resources/config.php(6): require_once('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/public/sale.php(3): require_once('/home/ubuntu/wo...')
+#6 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Configuration.php on line 117
+[04-Sep-2016 14:53:50 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(27): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[04-Sep-2016 14:55:03 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/clientToken.php(23): Braintree_ClientTokenGateway->generate(Array)
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[04-Sep-2016 14:57:01 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/clientToken.php(23): Braintree_ClientTokenGateway->generate(Array)
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[04-Sep-2016 14:57:24 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(58): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/ClientTokenGateway.php(44): Braintree_ClientTokenGateway->_doGenerate('/client_token', Array)
+#3 /home/ubuntu/workspace/public/clientToken.php(27): Braintree_ClientTokenGateway->generate(Array)
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[04-Sep-2016 15:09:48 UTC] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/ubuntu/workspace/public/refreshToken.php on line 16
+[04-Sep-2016 15:09:48 UTC] PHP Stack trace:
+[04-Sep-2016 15:09:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/refreshToken.php:0
+[04-Sep-2016 15:19:30 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(31): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[05-Sep-2016 09:08:08 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/ubuntu/workspace/public/clientToken.php on line 19
+[05-Sep-2016 09:16:16 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/w2d7...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(32): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[05-Sep-2016 09:19:05 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/w2d7...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(30): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[05-Sep-2016 09:19:06 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/w2d7...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(30): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[05-Sep-2016 09:26:48 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/w2d7...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(30): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[05-Sep-2016 09:26:49 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/w2d7...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(30): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[05-Sep-2016 09:42:44 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/w2d7...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(32): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[05-Sep-2016 09:42:45 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/w2d7...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(32): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55
+[05-Sep-2016 14:01:13 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(32): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[05-Sep-2016 14:02:15 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authentication' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(401)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(393): Braintree_Http->post('/merchants/2bds...', Array)
+#2 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(45): Braintree_TransactionGateway->_doCreate('/transactions', Array)
+#3 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/TransactionGateway.php(241): Braintree_TransactionGateway->create(Array)
+#4 /home/ubuntu/workspace/public/sale.php(32): Braintree_TransactionGateway->sale(Array)
+#5 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 52
+[22-Oct-2016 09:47:46 UTC] PHP Fatal error:  Uncaught exception 'Braintree_Exception_Authorization' in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php:55
+Stack trace:
+#0 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Http.php(45): Braintree_Util::throwStatusCodeException(403)
+#1 /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/MerchantGateway.php(20): Braintree_Http->post('/merchants/crea...', Array)
+#2 /home/ubuntu/workspace/resources/functions.php(15): Braintree_MerchantGateway->create(Array)
+#3 /home/ubuntu/workspace/public/trial-account.php(13): createTrialAccount('client_id$sandb...', 'client_secret$s...')
+#4 {main}
+  thrown in /home/ubuntu/workspace/vendor/braintree/braintree_php/lib/Braintree/Util.php on line 55

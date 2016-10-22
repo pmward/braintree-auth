@@ -1,0 +1,11 @@
+{
+  "require" : {
+    "braintree/braintree_php" : "3.17.0",
+    "monolog/monolog" : "1.16.*",
+    "rmccue/requests": ">=1.0"
+  },
+  "require-dev": {
+        "mashape/unirest-php": "2.*"
+    }
+
+}

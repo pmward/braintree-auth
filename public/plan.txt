@@ -1,0 +1,43 @@
+                        Plan:
+
+Test use cases which need to be available:
+Braintree Auth
+-- a way to set/store credneitals in session or in the DB
+-- create a trial account
+-- create a server side Braintree Auth onboarding URL
+-- create a client side Braintree Auth onboarding URL
+-- handle redirect back from Braintree Auth to exchange a code for access token
+-- manage access tokens: refresh ()createTokenFromRefreshToken) & revoke
+-- view different access tokens in a drop down, and detemine which to use
+    * show access token and which account/merchant ID it relates to
+    * show the country/currency of the access token
+    * allow user to enter their own access token
+
+
+                    List of tasks
+1)  Tidy up nav for various Braintree auth use cases
+2)  add all BT API calls in the functions file.
+3)  amend codeForAccessToken page so that "code" is shown, then user clicks button to trigger call
+4)  table, model, or side nav on all pages to show the credentials or access_token being used during any particular test. 
+    this should include buttons to set credentials
+5)  change the Braintree gateway instiation into the consutoructor in a class, so its instanitate each time. this should look in session or DB
+    to find active crednetials.
+6)  Create a perform "transactions tab" which leads to a series of drop downs or side navs for:
+ * test ecs (v3 of js)
+ * ECS with review page and amended details
+ * test hosted fields with 3ds, including server side lookup (v3 of js)
+ * drop in UI
+ * test ecm
+ * test vaulted card, with and without 3ds
+ * PayPal vault flow
+ * Payal vaulted payment
+ * simple test nounces for server side testing of failures
+ * a page with hosted fields and ECM on same page
+ 
+
+ 7) test the vault, update, add delete and show vaulted customers.
+ 8) 3DS testing with detailed info on the test harnes pages around handling 3DS responses
+ 9) Search a transaction from BT, then refund, void and capture buttons on it
+ 10) include option to refund, capture or void directly with ready made ID.
+ 11) store & lookup access tokens in the DB
+ 

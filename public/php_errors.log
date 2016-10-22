@@ -1,0 +1,46 @@
+[03-Sep-2016 16:04:37 UTC] PHP Warning:  require_once(../resources/config.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:04:37 UTC] PHP Stack trace:
+[03-Sep-2016 16:04:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:04:37 UTC] PHP Fatal error:  require_once(): Failed opening required '../resources/config.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:04:37 UTC] PHP Stack trace:
+[03-Sep-2016 16:04:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:05:02 UTC] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/resources/config.php on line 5
+[03-Sep-2016 16:05:02 UTC] PHP Stack trace:
+[03-Sep-2016 16:05:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:05:02 UTC] PHP   2. require_once() /home/ubuntu/workspace/public/checkout/index.php:3
+[03-Sep-2016 16:05:02 UTC] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/resources/config.php on line 5
+[03-Sep-2016 16:05:02 UTC] PHP Stack trace:
+[03-Sep-2016 16:05:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:05:02 UTC] PHP   2. require_once() /home/ubuntu/workspace/public/checkout/index.php:3
+[03-Sep-2016 16:07:07 UTC] PHP Warning:  require_once(../resources/config.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:07:07 UTC] PHP Stack trace:
+[03-Sep-2016 16:07:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:07:07 UTC] PHP Fatal error:  require_once(): Failed opening required '../resources/config.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:07:07 UTC] PHP Stack trace:
+[03-Sep-2016 16:07:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:08:17 UTC] PHP Warning:  require_once(/../resources/config.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:08:17 UTC] PHP Stack trace:
+[03-Sep-2016 16:08:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:08:17 UTC] PHP Fatal error:  require_once(): Failed opening required '/../resources/config.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:08:17 UTC] PHP Stack trace:
+[03-Sep-2016 16:08:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:10:03 UTC] PHP Warning:  require_once(./../resources/config.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:10:03 UTC] PHP Stack trace:
+[03-Sep-2016 16:10:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:10:03 UTC] PHP Fatal error:  require_once(): Failed opening required './../resources/config.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:10:03 UTC] PHP Stack trace:
+[03-Sep-2016 16:10:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:11:17 UTC] PHP Warning:  require_once(../vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/resources/config.php on line 5
+[03-Sep-2016 16:11:17 UTC] PHP Stack trace:
+[03-Sep-2016 16:11:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:11:17 UTC] PHP   2. require_once() /home/ubuntu/workspace/public/checkout/index.php:3
+[03-Sep-2016 16:11:17 UTC] PHP Fatal error:  require_once(): Failed opening required '../vendor/autoload.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/resources/config.php on line 5
+[03-Sep-2016 16:11:17 UTC] PHP Stack trace:
+[03-Sep-2016 16:11:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:11:17 UTC] PHP   2. require_once() /home/ubuntu/workspace/public/checkout/index.php:3
+[03-Sep-2016 16:17:24 UTC] PHP Warning:  require_once(../resources/config.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:17:24 UTC] PHP Stack trace:
+[03-Sep-2016 16:17:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
+[03-Sep-2016 16:17:24 UTC] PHP Fatal error:  require_once(): Failed opening required '../resources/config.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/public/checkout/index.php on line 3
+[03-Sep-2016 16:17:24 UTC] PHP Stack trace:
+[03-Sep-2016 16:17:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/public/checkout/index.php:0
