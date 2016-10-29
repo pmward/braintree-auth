@@ -1,15 +1,17 @@
 <?php
 $title = "Hosted Fields";
 require_once('../resources/config.php');
-include(TEMPLATE_FRONT . DS . "header.php");
-//include(TEMPLATE_FRONT . DS . "hs-header.php");
+//include(TEMPLATE_FRONT . DS . "header.php");
+include(TEMPLATE_FRONT . DS . "hs-header.php");
+include(TEMPLATE_FRONT . DS . "left-sidebar.php");
 include(TEMPLATE_FRONT . DS . "navigation-top.php");
+
 
 $clientToken = createClientToken($accessToken); ?>
 
 <script type="text/javascript">
 var client_token = "<?php echo $clientToken; ?>"; </script>
-
+<br /><br />
 <!-- Bootstrap inspired Braintree Hosted Fields example -->
 <div class="panel panel-default bootstrap-basic">
   <div class="panel-heading">
@@ -46,10 +48,10 @@ var client_token = "<?php echo $clientToken; ?>"; </script>
     </div>
 
 
-    <button value="submit" id="submit" class="btn btn-success btn-lg center-block">Pay with <span id="card-type">Card</span></button>
-  </form><br><br>  
+    <button value="submit" id="submit" class="btn btn-danger pull-left">Pay with <span id="card-type">Card</span></button>
+  </form>
 
-  <div class="panel panel-default panel-info">
+  <div class="panel panel-result panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Result</h3>
     </div>
@@ -174,7 +176,7 @@ braintree.client.create({
         .done(function( data ) {
 
         //alert( "Data Loaded: " + data );
-        $( "#result" ).html( "<pre><code>" + data + "</code></pre>" );
+        $( "#result" ).html( "<pre>" + data + "</pre>" );
 
           //     $('pre code').each(function(i, block) {
           //   hljs.highlightBlock(block);

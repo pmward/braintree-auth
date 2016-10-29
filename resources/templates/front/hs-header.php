@@ -13,6 +13,8 @@
 
     <link href="<?php echo DOMAIN . DS . PUBLIC_HOME . DS . 'css/left-sidebar.css'; ?>" rel="stylesheet">
     <link href="<?php echo DOMAIN . DS . PUBLIC_HOME . DS . 'css/custom.css'; ?>" rel="stylesheet">
+    <link href="<?php echo DOMAIN . DS . PUBLIC_HOME . DS . 'css/hosted-fields.css'; ?>" rel="stylesheet">
+
 
     <meta charset="UTF-8">
     <title><?php echo $title ?></title>

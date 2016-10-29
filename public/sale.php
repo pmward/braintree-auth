@@ -1,9 +1,5 @@
 <?php
-$title = "Transactions";
 require_once('../resources/config.php');
-include(TEMPLATE_FRONT . DS . "header.php");
-include(TEMPLATE_FRONT . DS . "navigation-top.php");
-
 //instatiate gateway object
 $gateway = new Braintree_Gateway(array(
     //'clientId' => $partnerClientId,
@@ -16,10 +12,6 @@ $gateway = new Braintree_Gateway(array(
 
 ));
 
-// echo "<br/>" . "<pre>";
-// var_dump($gateway);
-// echo "<br />" . "<br/>";
-
 $result = $gateway->transaction()->sale(array(
   'amount' => '1.50',
   //'merchantAccountId' => 'USD',
@@ -27,11 +19,6 @@ $result = $gateway->transaction()->sale(array(
   'paymentMethodNonce' => $_POST['payment_method_nonce']
 ));
 
-
-echo "<br/>" . "<pre>";
-var_dump($result);
-echo "<br />" . "</pre>";
+print_r($result);
 
 ?>
-
-<?php include(TEMPLATE_FRONT . DS . "footer.php"); ?>
