@@ -65,6 +65,7 @@ var client_token = "<?php echo $clientToken; ?>"; </script>
 
 <!-- Load Hosted Fields component. -->
 <script src="https://js.braintreegateway.com/web/3.5.0/js/hosted-fields.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.5.0/js/three-d-secure.min.js"></script>
 
 <script>
 braintree.client.create({
@@ -162,14 +163,42 @@ braintree.client.create({
           console.error(err);
           return;
         }
-
-        // This is where you would submit payload.nonce to your server
+        //console logging...
         console.log('Got a nonce: ' + payload.nonce);
-        console.log('Got some details: ' + 'the last 2 was: ' + payload.details.lastTwo)
+        console.log('Got some details: ' + 'the last 2 was: ' + payload.details.lastTwo);
         console.log('the card type was ' + payload.details.cardType);
         console.log('Got some description: ' + payload.description);
 
         var payment_method_nonce = payload.nonce;
+
+        braintree.threeDSecure.create({
+          client: clientInstance
+        }, function (threeDSecureErr, threeDSecureInstance) {
+          if (threeDSecureErr) {
+            // Handle error in 3D Secure component creation
+            console.log('3ds error....' + threeDSecureErr);
+            return;
+          }
+          var threeDSecure = threeDSecureInstance;
+        });
+
+        threeDSecure.verifyCard({
+          amount: 150,
+          nonce: payment_method_nonce
+          // addFrame and removeFrame functions here later....
+
+        },  function (err, response) {
+          if (err) {
+            // Handle error
+            console.log(err);
+            return;
+          }
+          console.log(' got a new 3DS nonce: ' + response.nonce);
+          // need to perform server side lookup with the nonce here..doa jquery post to lookup nonce
+          var threeDSecureNone = response.nonce;
+        });
+
+        //send the payment method none to server
         var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + payment_method_nonce;
 
         $.post( "sale.php", sdata)
