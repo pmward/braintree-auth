@@ -15,7 +15,7 @@ var client_token = "<?php echo $clientToken; ?>"; </script>
   <div class="panel-heading">
     <h3 class="panel-title">Enter Card Details</h3>
   </div>
-  <form class="panel-body">
+  <form id="checkout" class="panel-body">
     <div class="row">
       <div class="form-group col-xs-8">
         <label class="control-label">Card Number</label>
@@ -47,7 +47,16 @@ var client_token = "<?php echo $clientToken; ?>"; </script>
 
 
     <button value="submit" id="submit" class="btn btn-success btn-lg center-block">Pay with <span id="card-type">Card</span></button>
-  </form>
+  </form><br><br>  
+
+  <div class="panel panel-default panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Result</h3>
+    </div>
+    <div class="panel-body" id="result">
+       Waiting..
+    </div>
+  </div>
 
 <!-- Load the required client component. -->
 <script src="https://js.braintreegateway.com/web/3.5.0/js/client.min.js"></script>
@@ -153,12 +162,29 @@ braintree.client.create({
         }
 
         // This is where you would submit payload.nonce to your server
-        alert('Submit your nonce to your server here!');
+        console.log('Got a nonce: ' + payload.nonce);
+        console.log('Got some details: ' + 'the last 2 was: ' + payload.details.lastTwo)
+        console.log('the card type was ' + payload.details.cardType);
+        console.log('Got some description: ' + payload.description);
+
+        var payment_method_nonce = payload.nonce;
+        var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + payment_method_nonce;
+
+        $.post( "sale.php", sdata)
+        .done(function( data ) {
+
+        //alert( "Data Loaded: " + data );
+        $( "#result" ).html( "<pre><code>" + data + "</code></pre>" );
+
+          //     $('pre code').each(function(i, block) {
+          //   hljs.highlightBlock(block);
+          // });
+        });
       });
     });
   });
 });
 
 </script>
-<script src="<?php echo DOMAIN . DS . PUBLIC_HOME . DS . 'js/hs.js'; ?>"></script>
+<!-- <script src="<?php echo DOMAIN . DS . PUBLIC_HOME . DS . 'js/hs.js'; ?>"></script> -->
 <?php include(TEMPLATE_FRONT . DS . "footer.php"); ?>

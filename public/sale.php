@@ -16,14 +16,15 @@ $gateway = new Braintree_Gateway(array(
 
 ));
 
-echo "<br/>" . "<pre>";
-var_dump($gateway);
-echo "<br />" . "<br/>";
+// echo "<br/>" . "<pre>";
+// var_dump($gateway);
+// echo "<br />" . "<br/>";
 
 $result = $gateway->transaction()->sale(array(
-  'amount' => '1.00',
+  'amount' => '1.50',
   //'merchantAccountId' => 'USD',
-  'paymentMethodNonce' => 'fake-valid-nonce'
+  //'paymentMethodNonce' => 'fake-valid-nonce'
+  'paymentMethodNonce' => $_POST['payment_method_nonce']
 ));
 
 
