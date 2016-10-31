@@ -46,10 +46,10 @@ defined("TEMPLATE_BACK") ? null : define("TEMPLATE_BACK", __DIR__ . DS . "templa
 defined("PUBLIC_HOME") ? null : define("PUBLIC_HOME", "public");
 
 //defined("DOMAIN") ? null : define("DOMAIN", "https://braintree-auth-pmward.c9users.io");
-defined("DOMAIN") ? null : define("DOMAIN", "http://localhost:8888/braintree-Auth");
+//defined("DOMAIN") ? null : define("DOMAIN", "http://localhost:8888/braintree-Auth");
 //defined("DOMAIN") ? null : define("DOMAIN", "https://bt-auth:8890");
 //http://localhost:8888/braintree-Auth/public/
-
+defined("DOMAIN") ? null : define("DOMAIN", "https://bt-auth-v2-pmward.c9users.io");
 //defined("BASE_PATH") ? null : define("BASE_PATH", "braintree/braintree-partner-api");
 
 $domain = urlencode("http://localhost:8888/braintree-Auth");
