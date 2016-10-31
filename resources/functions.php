@@ -59,25 +59,25 @@ function createTrialAccount($partnerClientId, $partnerClientSecret) {
     'scope' => 'read_write',
     'state' => 'phil_foo_state_uk',
     'user' => array(
-        'country' => 'GBR',
-        'email' => 'pward@paypal.com'
-    ),
+         'country' => 'GBR',
+        'email' => 'pward123@paypal.com'
+     ),
     'business' => array(
         'name' => 'A UK business ',
-        'registeredAs' => 'UK T-Shirt store',
+        'registeredAs' => 'UK Retail Store',
         'description' => 'fashion retailer',
         'industry' => 'clothing',
-        'street_address' => 'uk t-shirt store - Shepherds Chase',
-        'locality' => 'bagshot',
+        'street_address' => '50 Markham Court',
+        'locality' => 'Camberley',
         'region' => 'Surrey',
-        'postal_code' => 'GU195QX',
+        'postal_code' => 'GU153HJ',
         'country' => 'GBR',
-        'established_on' => '1981-01',
-        'annual_volume_amount' => 50000,
-        'average_transaction_amount' => 100,
-        'maximum_transaction_amount' => 9998,
-        'ship_physical_goods' => true,
-        'fulfillment_completed_in' => 3,
+        // 'established_on' => '1981-01',
+        // 'annual_volume_amount' => 50000,
+        // 'average_transaction_amount' => 100,
+        // 'maximum_transaction_amount' => 9998,
+        // 'ship_physical_goods' => true,
+        // 'fulfillment_completed_in' => 3,
         'currency' => 'GBP',
         'website' => 'http://example.com'
     ),
@@ -105,7 +105,8 @@ function createSignUp($partnerClientId, $partnerClientSecret, $onboardingParams)
         ),
         'business' => array(
             'name' => $onboardingParams["business"]["name"],
-            'registeredAs' => $onboardingParams["business"]["registeredAs"]
+            'registeredAs' => $onboardingParams["business"]["registeredAs"],
+            'country' => $onboardingParams["business"]["country"]
         ),
         'paymentMethods' => array(
             'credit_card','paypal'

@@ -15,7 +15,6 @@
           <ul class="nav navbar-nav">
             <li><a href="<?php echo DOMAIN . DS . PUBLIC_HOME . DS . "trial-account.php";      ?>">Create Trial Account</a></li>
             <li><a href="<?php echo DOMAIN . DS . PUBLIC_HOME . DS;                            ?>">Enter BT Auth</a></li>
-            <li><a href="<?php echo DOMAIN . DS . PUBLIC_HOME . DS . "codeForAccessToken.php"; ?>">Exchange code for access token</a></li>
             <li><a href="<?php echo DOMAIN . DS . PUBLIC_HOME . DS . "checkout-with-paypal.php";      ?>">Perform Transactions</a></li>
             <li><a href="#contact">Example Cart Flow</a></li>
           </ul>
