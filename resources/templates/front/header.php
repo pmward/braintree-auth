@@ -4,7 +4,7 @@
     <!-- Load the client component. -->
     <script src="https://js.braintreegateway.com/web/3.5.0/js/client.min.js"></script>
     <!-- Load the PayPal component. -->
-    <script src="https://js.braintreegateway.com/web/3.5.0/js/paypal.min.js"></script>
+    <!--<script src="https://js.braintreegateway.com/web/3.5.0/js/paypal.min.js"></script>-->
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">

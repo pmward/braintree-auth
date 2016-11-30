@@ -7,10 +7,10 @@ include(TEMPLATE_FRONT . DS . "left-sidebar.php");
 include(TEMPLATE_FRONT . DS . "navigation-top.php");
 
 
-$clientToken = createClientToken($accessToken); ?>
+//$clientToken = createClientToken($accessToken); 
+$clientToken = createClientTokenWithCredentials($environment, $merchantId, $publicKey, $privateKey) ?>
 
-<script type="text/javascript">
-var client_token = "<?php echo $clientToken; ?>"; </script>
+<script type="text/javascript"></script>
 <br /><br />
 <!-- Bootstrap inspired Braintree Hosted Fields example -->
 <div class="panel panel-default bootstrap-basic">
@@ -65,9 +65,15 @@ var client_token = "<?php echo $clientToken; ?>"; </script>
 
 <!-- Load Hosted Fields component. -->
 <script src="https://js.braintreegateway.com/web/3.5.0/js/hosted-fields.min.js"></script>
+<!-- Load 3ds  component. -->
 <script src="https://js.braintreegateway.com/web/3.5.0/js/three-d-secure.min.js"></script>
+<!-- Load data collector component. -->
+<script src="https://js.braintreegateway.com/web/3.5.0/js/data-collector.min.js"></script>
 
 <script>
+var client_token = "<?php echo $clientToken; ?>"; 
+var threeDSecure;
+
 braintree.client.create({
   authorization: client_token
 }, function (err, clientInstance) {
@@ -75,6 +81,22 @@ braintree.client.create({
     console.error(err);
     return;
   }
+  
+  braintree.dataCollector.create({
+    client: clientInstance,
+    kount: true
+    
+  }, function (err, dataCollectorInstance) {
+      if (err) {
+        console.log('device collector err fired...' + err);
+        // Handle error in creation of data collector
+        return;
+      }
+      // At this point, you should access the dataCollectorInstance.deviceData value and provide it
+      // to your server, e.g. by injecting it into your form as a hidden input.
+      console.log('look like data collector worked ' + dataCollectorInstance)
+      var deviceData = dataCollectorInstance.deviceData;
+    });
 
   braintree.hostedFields.create({
     client: clientInstance,
@@ -171,32 +193,33 @@ braintree.client.create({
 
         var payment_method_nonce = payload.nonce;
 
-        braintree.threeDSecure.create({
-          client: clientInstance
-        }, function (threeDSecureErr, threeDSecureInstance) {
-          if (threeDSecureErr) {
-            // Handle error in 3D Secure component creation
-            console.log('3ds error....' + threeDSecureErr);
-            return;
-          }
-          var threeDSecure = threeDSecureInstance;
-        });
+        // braintree.threeDSecure.create({
+        //   client: clientInstance
+        // }, function (threeDSecureErr, threeDSecureInstance) {
+        //   if (threeDSecureErr) {
+        //     // Handle error in 3D Secure component creation
+        //     console.log('3ds error....' + threeDSecureErr);
+        //     return;
+        //   }
+        //   console.log("something was logged..." . threeDSecureInstance)
+        //   threeDSecure = threeDSecureInstance;
+        // });
+        
+        // threeDSecure.verifyCard({
+        //   amount: 150,
+        //   nonce: payment_method_nonce
+        //   // addFrame and removeFrame functions here later....
 
-        threeDSecure.verifyCard({
-          amount: 150,
-          nonce: payment_method_nonce
-          // addFrame and removeFrame functions here later....
-
-        },  function (err, response) {
-          if (err) {
-            // Handle error
-            console.log(err);
-            return;
-          }
-          console.log(' got a new 3DS nonce: ' + response.nonce);
-          // need to perform server side lookup with the nonce here..doa jquery post to lookup nonce
-          var threeDSecureNone = response.nonce;
-        });
+        // },  function (err, response) {
+        //   if (err) {
+        //     // Handle error
+        //     console.log(err);
+        //     return;
+        //   }
+        //   console.log(' got a new 3DS nonce: ' + response.nonce);
+        //   // need to perform server side lookup with the nonce here..doa jquery post to lookup nonce
+        //   var threeDSecureNonce = response.nonce;
+        // });
 
         //send the payment method none to server
         var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + payment_method_nonce;

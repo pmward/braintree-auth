@@ -126,5 +126,26 @@ function createClientToken($accessToken) {
     return $clientToken;
 }
 
+function createClientTokenWithCredentials($environment, $merchantId, $publicKey, $privateKey) {
+    $gateway = new Braintree_Gateway(array(
+        'environment' => $environment,
+        'merchantId' => $merchantId,
+        'publicKey' => $publicKey,
+        'privateKey' => $privateKey
+         ));
+   
+    $clientToken = $gateway->clientToken()->generate();
+    //array(
+      //"customerId" => '',
+      //'merchantAccountId' => 'USD'));
+    return $clientToken;
+   
+}
+
+//$clientToken = createClientToken($accessToken); 
+//echo $clientToken;
+
 //$url = createSignUp($partnerClientId, $partnerClientSecret, $onboardingParams);
+//print_r($gateway);
+//echo createClientTokenWithCrednetials();
 ?>

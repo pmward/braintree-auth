@@ -20,6 +20,8 @@ include(TEMPLATE_FRONT . DS . "left-sidebar.php");
      data-button_type="submit"
      data-button_disabled="false"
  ></script>
+ 
+<?php include(TEMPLATE_FRONT . DS . 'result-panel.php'); ?> 
  <!-- Configuration options:
   data-color: "blue", "gold", "silver"
   data-size: "tiny", "small", "medium"
@@ -30,6 +32,7 @@ include(TEMPLATE_FRONT . DS . "left-sidebar.php");
 <?php $clientToken = createClientToken($accessToken); ?>
 
 <script type="text/javascript">
+var payment_method_nonce = null;
 
 var client_token = "<?php echo $clientToken; ?>";
 
@@ -70,11 +73,12 @@ braintree.client.create({
 
       // Because tokenization opens a popup, this has to be called as a result of
       // customer action, like clicking a button—you cannot call this at any time.
-        paypalInstance.tokenize({
+      paypalInstance.tokenize({
       flow: 'checkout', // Required
       amount: 10.00, // Required
-      currency: 'USD', // Required
+      currency: 'GBP', // Required
       locale: 'en_US',
+      intent: 'authorize',
       enableShippingAddress: true,
       }, function (tokenizeErr, payload) {
 
@@ -90,15 +94,33 @@ braintree.client.create({
         paypalButton.setAttribute('disabled', true);
         console.log('Got a nonce! You should submit this to your server.');
         console.log(payload.nonce);
+        
+        var payment_method_nonce = '&payment_method_nonce=' + payload.nonce;
+        console.log(payment_method_nonce);
+        
+          $.post( "sale.php", payment_method_nonce)
+          .done(function( data ) {
+            
+            //alert( "Data Loaded: " + data );
+            $("#result").html( "<pre>" + data + "</pre>" );
+              //     $('pre code').each(function(i, block) {
+              //   hljs.highlightBlock(block);
+              // });
+              });
 
       });
 
     }, false);
-
+    
+    
+    
+  
+    
   });
 
 });
 
 </script>
+<script src="https://js.braintreegateway.com/web/3.5.0/js/paypal.min.js"></script>
 
 <?php include(TEMPLATE_FRONT . DS . "footer.php"); ?>
