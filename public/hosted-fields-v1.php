@@ -184,7 +184,20 @@ braintree.client.create({
         console.log('Got some details: ' + 'the last 2 was: ' + payload.details.lastTwo);
         console.log('the card type was ' + payload.details.cardType);
         console.log('Got some description: ' + payload.description);
+        
+          //***** send the payment method nonce to server to veriy 3DS result  **********8
+          var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + payload.nonce;
+          //var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + payment_method_nonce;
+          console.log(sdata);
+          //$.post( "nonceFind.php", sdata)
+          $.post( "sale.php", sdata)
+          .done(function( data ) {
+  
+          //alert( "Data Loaded: " + data );
+          $( "#result" ).html( "<pre>" + data + "</pre>" );
+          });
 
+  
         var payment_method_nonce = payload.nonce;
 
         var my3DSContainer;
@@ -205,13 +218,32 @@ braintree.client.create({
         }
       }, function (err, threeDSecurepayload) {
         if (err) {
-          console.log('3ds err was triggered: ' + err);
+          console.log('3ds err was triggered: ' , err);
+          
+          //trap unsupported card type error
+          console.log(err.details.originalError.error.message == "Unsupported card type")
+          
+          console.log(threeDSecurepayload);
           
           return;
         }
         
-        console.log('the 3dsPayload was returned' + threeDSecurepayload);
+        console.log('the 3dsPayload was returned ' , threeDSecurepayload);
         if (threeDSecurepayload.liabilityShifted) {
+          
+          console.log('3ds nonce....' + threeDSecurepayload.nonce);
+          
+         //send the payment method none to server
+          var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + threeDSecurepayload.nonce;
+          //var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + payment_method_nonce;
+          console.log(sdata);
+          $.post( "sale.php", sdata)
+          .done(function( data ) {
+  
+          //alert( "Data Loaded: " + data );
+          $( "#result" ).html( "<pre>" + data + "</pre>" );
+          });
+          
           // Liablity has shifted
           console.log(threeDSecurepayload.nonce);
         } else if (threeDSecurepayload.liabilityShiftPossible) {
@@ -226,20 +258,8 @@ braintree.client.create({
         }
       });
 
-        //send the payment method none to server
-        var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + payment_method_nonce;
-        //var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + payment_method_nonce;
-        console.log(sdata);
-        $.post( "sale.php", sdata)
-        .done(function( data ) {
 
-        //alert( "Data Loaded: " + data );
-        $( "#result" ).html( "<pre>" + data + "</pre>" );
-
-          //     $('pre code').each(function(i, block) {
-          //   hljs.highlightBlock(block);
-          // });
-        });
+        
       });
     });
   });

@@ -20,24 +20,9 @@ $gateway = new Braintree_Gateway(array(
 // echo '<pre>';
 // var_dump($_POST);
 // echo '</pre>';
-$result = $gateway->transaction()->sale(array(
- // 'deviceData' => $POST['device_data'],
-  //'deviceData' => $POST['123456789'],
-  'orderId' => 'PHILW' . rand(2, 1999), 
-  'channel' => 'Sellr_Cart_BT', 
-  'amount' => '1.52',
-  'merchantAccountId' => 'test_gbp',
-  //'paymentMethodNonce' => 'fake-valid-nonce'
-  'paymentMethodNonce' => $_POST['payment_method_nonce'],
-  /*-- decline nonces-- */
-  //'paymentMethodNonce' => 'fake-processor-declined-visa-nonce'
-    //'paymentMethodNonce' => 'fake-gateway-rejected-fraud-nonce',
-    
-    'options' => [
-    'submitForSettlement' => true
-  ]
-    
-));
+$result = $gateway->paymentMethodNonce()->find($_POST['payment_method_nonce']
+
+);
 
 echo '<pre>';
 print_r($result);

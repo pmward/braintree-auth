@@ -8,7 +8,7 @@ include(TEMPLATE_FRONT . DS . "navigation-top.php");
 
 
 //$clientToken = createClientToken($accessToken); 
-$clientToken = createClientTokenWithCredentials($environment, $merchantId, $publicKey, $privateKey) ?>
+/$clientToken = createClientTokenWithCredentials($environment, $merchantId, $publicKey, $privateKey) ?>
 
 <script type="text/javascript"></script>
 <br /><br />
@@ -191,7 +191,8 @@ braintree.client.create({
         console.log('the card type was ' + payload.details.cardType);
         console.log('Got some description: ' + payload.description);
 
-        var payment_method_nonce = payload.nonce;
+         var payment_method_nonce = '&payment_method_nonce=' + payload.nonce;
+        console.log(payment_method_nonce);
 
         // braintree.threeDSecure.create({
         //   client: clientInstance
@@ -222,13 +223,15 @@ braintree.client.create({
         // });
 
         //send the payment method none to server
-        var sdata=$("#checkout").serialize() + '&payment_method_nonce=' + payment_method_nonce;
-
-        $.post( "sale.php", sdata)
-        .done(function( data ) {
-
-        //alert( "Data Loaded: " + data );
-        $( "#result" ).html( "<pre>" + data + "</pre>" );
+    $.post( "sale.php", payment_method_nonce)
+          .done(function( data ) {
+            
+            //alert( "Data Loaded: " + data );
+            $("#result").html( "<pre>" + data + "</pre>" );
+              //     $('pre code').each(function(i, block) {
+              //   hljs.highlightBlock(block);
+              // });
+              });
 
           //     $('pre code').each(function(i, block) {
           //   hljs.highlightBlock(block);
@@ -237,8 +240,12 @@ braintree.client.create({
       });
     });
   });
-});
+
+
+
 
 </script>
 <!-- <script src="<?php echo DOMAIN . DS . PUBLIC_HOME . DS . 'js/hs.js'; ?>"></script> -->
+
+<?php echo $clientToken; ?>
 <?php include(TEMPLATE_FRONT . DS . "footer.php"); ?>

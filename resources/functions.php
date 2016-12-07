@@ -119,10 +119,11 @@ function createClientToken($accessToken) {
     $gateway = new Braintree_Gateway(array(
          'accessToken' => $accessToken));
 
-    $clientToken = $gateway->clientToken()->generate();
-    //array(
+    $clientToken = $gateway->clientToken()->generate(array(
       //"customerId" => '',
       //'merchantAccountId' => 'USD'));
+          'merchantAccountId' => 'test_gbp'
+          ));
     return $clientToken;
 }
 
@@ -134,10 +135,12 @@ function createClientTokenWithCredentials($environment, $merchantId, $publicKey,
         'privateKey' => $privateKey
          ));
    
-    $clientToken = $gateway->clientToken()->generate();
-    //array(
+    $clientToken = $gateway->clientToken()->generate(
+    array(
       //"customerId" => '',
-      //'merchantAccountId' => 'USD'));
+       'merchantAccountId' => 'test_gbp'
+      //'merchantAccountId' => 'USD'
+      ));
     return $clientToken;
    
 }
